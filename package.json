@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fmt": "prettier --write --plugin-search-dir=. ."
+    "fmt": "prettier --write --plugin-search-dir=. .",
+    "lint": "eslint ."
   },
   "dependencies": {
     "astro": "^2.0.6"
