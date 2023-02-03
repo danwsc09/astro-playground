@@ -1,22 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+
+const pageTitle = "My Main Titleeeee";
+const champions = ["Vayne", "Twitch"];
+
+const nameColor = "red";
 ---
 
-<Layout title="This is the titleeee">
+<Layout title={pageTitle}>
   <main>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-    </ul>
+    <h1>{pageTitle}</h1>
+    {
+      champions.map((champ) =>
+        champ.length > 5 ? <div>name: {champ}</div> : <h3>name: {champ}</h3>
+      )
+    }
   </main>
 </Layout>
+<style define:vars={{ nameColor }}>
+  h1 {
+    color: purple;
+    font-size: 4rem;
+  }
+  div {
+    color: var(--nameColor);
+    font-weight: bold;
+  }
+</style>
