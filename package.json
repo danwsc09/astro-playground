@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && pnpm tsc && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "fmt": "prettier --write --plugin-search-dir=. .",

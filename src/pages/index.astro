@@ -1,6 +1,6 @@
 ---
-import Social from "../components/Social.astro";
-import Layout from "../layouts/Layout.astro";
+import Social from "@/components/Social.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const pageTitle = "My Main Titleeeee";
 const champions = ["Vayne", "Twitch"];
@@ -8,7 +8,7 @@ const champions = ["Vayne", "Twitch"];
 const nameColor = "red";
 ---
 
-<Layout title={pageTitle}>
+<BaseLayout title={pageTitle}>
   <main>
     <h1>{pageTitle}</h1>
     {
@@ -17,8 +17,9 @@ const nameColor = "red";
       )
     }
     <Social platform="bacefook" username="wtiwwer" />
+    <p>Env variable: {import.meta.env.PUBLIC_VAR}</p>
   </main>
-</Layout>
+</BaseLayout>
 <style define:vars={{ nameColor }}>
   h1 {
     color: purple;
