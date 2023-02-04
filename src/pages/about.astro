@@ -1,10 +1,10 @@
 ---
-import Layout from "@/layouts/BaseLayout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const someContent = "content here";
 ---
 
-<Layout title={someContent}>
+<BaseLayout title={someContent}>
   <div>hello</div>
   <h3>{someContent}</h3>
-</Layout>
+</BaseLayout>

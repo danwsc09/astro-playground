@@ -1,0 +1,12 @@
+---
+interface Props {
+  frontmatter: any;
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<p>{frontmatter.pubDate.slice(0, 10)}</p>
+<p><em>{frontmatter.description}</em></p>
+<p>Written by: {frontmatter.author}</p>
+<img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
