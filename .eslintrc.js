@@ -23,5 +23,8 @@ module.exports = {
       },
     },
     // ...
+    {
+      files: ["src/*.ts", "src/*.tsx"],
+    },
   ],
 };

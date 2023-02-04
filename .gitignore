@@ -21,3 +21,6 @@ pnpm-debug.log*
 .DS_Store
 .vscode
 .idea
+
+# netlify
+.netlify
